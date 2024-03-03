@@ -38,17 +38,9 @@ export const addToCart = async(req:Request, res:Response)=>{
 
 export const removeFromCart = async(req:Request, res: Response)=>{
     try {
-        const id = req.params?.['id']
+        const order_id = req.params?.['id']
 
-        const{orderId, userId, productId, orderedQuantity} = req.body
-
-        const result = await dbhelper.execute("cancelOrder", {
-            orderId:id, 
-            userId:userId, 
-            productId:productId, 
-            orderedQuantity:orderedQuantity
-        })
-
+        const result = await dbhelper.execute("removeFromCart",{order_id})
 
         console.log(result);
         

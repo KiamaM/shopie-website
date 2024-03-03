@@ -13,6 +13,9 @@ SELECT * FROM orders
 ALTER TABLE orders
 ADD CONSTRAINT FK_products_orders FOREIGN KEY (productId) REFERENCES products(productId);
 
+ALTER TABLE orders
+ADD CONSTRAINT FK_users_orders FOREIGN KEY (userId) REFERENCES Users(userId);
+
 
 ALTER TABLE orders
 DROP COLUMN amount 

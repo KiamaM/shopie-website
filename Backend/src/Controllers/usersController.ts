@@ -1,8 +1,8 @@
 import { Request, Response } from "express"; 
-import { sqlConfig } from "../config/sqlConfig"; 
+import { sqlConfig } from "../Config/sqlConfig"; 
 import bcrypt from 'bcrypt'
 import { v4 } from 'uuid'
-import Connection from "../dbHelpers/dbHelpers";
+import Connection from "../dbHelper/dbhelper";
 import { regUserValidation, validateUpdateuser, loginUserValidation} from "../Validators/validators"; 
 import mssql from 'mssql'
 import jwt from 'jsonwebtoken'

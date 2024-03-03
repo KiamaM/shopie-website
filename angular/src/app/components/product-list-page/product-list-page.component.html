@@ -1,15 +1,21 @@
-<div class="titleDiv">
-    <p>Perfect deliciousness</p>
-</div>
-<div class="allProductsDiv">
-    <div class="productCard">
-        <div class="productImg">
-            <img src="../../../assets/Untitled design.png" alt="">
-        </div>
-        <div class="productDescDiv">
-            <p>{{productTitle}}</p>
-            <p>{{price}}</p>
-            <button>Order Now</button>
+<div class="productsContainer">
+    <div class="titleDiv">
+        <p>Perfect deliciousness</p>
+    </div>
+    <div class="allProductsDiv">
+        <div class="productCard" *ngFor="let product of productsArray;">
+            <div class="productImg">
+                <img src="../../../assets/Untitled design.png" alt="">
+            </div>
+            <div class="productDescDiv">
+                <p>{{product.productName}}</p>
+                <p>{{product.description}}</p>
+                <p>{{product.regularPrice}}</p>
+                <p>{{product.salePrice}}</p>
+                <button routerLink="/cart" style="cursor: pointer;">Order Now</button>
+            </div>
         </div>
     </div>
 </div>
+
+<router-outlet></router-outlet>

@@ -1,15 +1,5 @@
-CREATE PROCEDURE cancelOrder(
-    @orderId VARCHAR(100), 
-    @userId VARCHAR(100), 
-    @productId VARCHAR(100),
-    @orderedQuantity NUMERIC
-)
+CREATE OR ALTER PROCEDURE removeFromCart(@orderId VARCHAR(100))
 AS
 BEGIN
-    UPDATE orders SET 
-    orderId = @orderId,
-    productId = @productId,
-    userId = @userId,
-    orderedQuantity = @orderedQuantity
-    WHERE orderId = @orderId
+    UPDATE orders SET isRemovedFromCart = 1 WHERE orderId = @orderId
 END

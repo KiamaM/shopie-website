@@ -1,5 +1,6 @@
 CREATE TABLE products(
     productId VARCHAR(100) PRIMARY KEY NOT NULL,
+    productName VARCHAR(100) NOT NULL,
     description VARCHAR(400) NOT NULL,
     category VARCHAR(100) NOT NULL,
     stockQuantity NUMERIC NOT NULL,

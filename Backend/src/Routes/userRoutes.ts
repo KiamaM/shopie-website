@@ -1,5 +1,5 @@
 import { Router } from "express"; 
-import { deleteUserController, fetchAllUSersController, getSingleUserController, getUserDetails, loginUserControllers, registerUserController, resetPasswordControllers, updateUserControllers } from "../controllers/usersController";
+import { deleteUserController, fetchAllUSersController, getSingleUserController, getUserDetails, loginUserControllers, registerUserController, resetPasswordControllers, updateUserControllers } from "../Controllers/usersController";
 import { verifyToken } from "../Middlewares/verifyToken";
 
 const userRouter = Router();

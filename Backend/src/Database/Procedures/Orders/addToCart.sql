@@ -4,7 +4,7 @@ CREATE OR ALTER PROCEDURE makeAnOrder
     @productId VARCHAR(100),
     @orderedQuantity NUMERIC
 AS
-    IF NOT EXISTS (SELECT * FROM users WHERE userId=@userId AND  isDeleted=0)
+    IF NOT EXISTS (SELECT * FROM Users WHERE userId=@userId)
         BEGIN
             DECLARE @ErrorMsg VARCHAR(100) = 'Sign Up to make order'
             RAISERROR(@ErrorMsg, 16, 1);
